@@ -5,16 +5,17 @@
 // to worry about what is going on under the hood
 
 public class BankAccountFacade {
-
+    //Informações privadas à classe.
     private int accountNumber;
     private int securityCode;
 
+    //Instacia de todos os objetos criados anteriormente.
     AccountNumberCheck acctChecker;
     SecurityCodeCheck codeChecker;
     FundsCheck fundChecker;
-
     WelcomeToBank bankWelcome;
 
+    //Construtor para a classe que implementa o padrão de projeto.
     public BankAccountFacade(int newAcctNum, int newSecCode){
 
         accountNumber = newAcctNum;
@@ -29,10 +30,9 @@ public class BankAccountFacade {
     }
 
     public int getAccountNumber() { return accountNumber; }
-
     public int getSecurityCode() { return securityCode; }
 
-
+    //Verifica as informações da conta, e gerencia a função de saque.
     public void withdrawCash(double cashToGet){
 
         if(acctChecker.accountActive(getAccountNumber()) &&
@@ -49,7 +49,7 @@ public class BankAccountFacade {
 
     }
 
-
+    //Checa as informações da conta e gerencia a função de depósito.
     public void depositCash(double cashToDeposit){
 
         if(acctChecker.accountActive(getAccountNumber()) &&
