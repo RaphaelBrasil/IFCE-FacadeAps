@@ -12,8 +12,8 @@ public class FundsCheck {
         //Saldo insuficiente
         if(cashToWithdrawal > getCashInAccount()) {
 
-            System.out.println("Error: You don't have enough money");
-            System.out.println("Current Balance: " + getCashInAccount());
+            System.out.println("Erro: Você não possui saldo suficiente");
+            System.out.println("Saldo Atual: " + getCashInAccount());
 
             return false;
             //Saldo com valor suficiente
@@ -21,7 +21,7 @@ public class FundsCheck {
 
             decreaseCashInAccount(cashToWithdrawal);
 
-            System.out.println("Withdrawal Complete: Current Balance is " + getCashInAccount());
+            System.out.println("Saque completo: Saldo atual é  " + getCashInAccount());
 
             return true;
 
@@ -33,7 +33,7 @@ public class FundsCheck {
 
         increaseCashInAccount(cashToDeposit);
 
-        System.out.println("Deposit Complete: Current Balance is " + getCashInAccount());
+        System.out.println("Deposito Completo: Saldo atual é  " + getCashInAccount());
 
     }
 
