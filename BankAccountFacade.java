@@ -39,11 +39,11 @@ public class BankAccountFacade {
                 codeChecker.isCodeCorrect(getSecurityCode()) &&
                 fundChecker.haveEnoughMoney(cashToGet)) {
 
-            System.out.println("Transaction Complete\n");
+            System.out.println("Transacao Completada\n");
 
         } else {
 
-            System.out.println("Transaction Failed\n");
+            System.out.println("Transacao falhou\n");
 
         }
 
@@ -57,11 +57,11 @@ public class BankAccountFacade {
 
             fundChecker.makeDeposit(cashToDeposit);
 
-            System.out.println("Transaction Complete\n");
+            System.out.println("Transacao Completada\n");
 
         } else {
 
-            System.out.println("Transaction Failed\n");
+            System.out.println("Transacao falhou\n");
 
         }
 
